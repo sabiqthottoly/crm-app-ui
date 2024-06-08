@@ -7,6 +7,31 @@ body {
   color: #5d5d5d; /* Dark grey color */
 }
 
+/* Add this to your global CSS or a relevant CSS file */
+.toggle-checkbox:checked {
+  right: 0;
+  border-color: #68d391;
+}
+
+.toggle-checkbox:checked + .toggle-label {
+  background-color: #68d391;
+}
+
+.toggle-checkbox {
+  right: 0;
+  transition: right 0.3s ease-in-out;
+}
+
+.toggle-checkbox:checked {
+  right: 0;
+}
+
+.toggle-label {
+  width: 2.5rem;
+  height: 1.25rem;
+  transition: background-color 0.3s ease-in-out;
+}
+
 /* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;

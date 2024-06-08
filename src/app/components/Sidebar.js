@@ -30,8 +30,8 @@ export default function Sidebar() {
                         <h3 className="font-semibold text-sm mb-2">General</h3>
                         <ul className="space-y-2.5">
                             <li>
-                                <Link href="/" className={`flex items-center text-gray-700 hover:text-gray-900 block py-2.5 px-4 rounded-md ${isActive('/') ? activeStyle : ''}`}>
-                                    <FaHome className={`mr-3 text-lg ${isActive('/') ? 'fill-current' : ''}`} /> Home
+                                <Link href="/dashboard" className={`flex items-center text-gray-700 hover:text-gray-900 block py-2.5 px-4 rounded-md ${isActive('/dashboard') ? activeStyle : ''}`}>
+                                    <FaHome className={`mr-3 text-lg ${isActive('/dashboard') ? 'fill-current' : ''}`} /> Dashboard
                                 </Link>
                             </li>
                             <li>
