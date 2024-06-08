@@ -12,7 +12,7 @@ const Table = () => {
   const [selectedStatus, setSelectedStatus] = useState('All');
   const [isFilterModalOpen, setIsFilterModalOpen] = useState(false);
   const filterButtonRef = useRef(null);
-  const itemsPerPage = 10;
+  const itemsPerPage = 5;
 
   // Filter data based on search term and selected status
   const filteredData = leadsMockData.filter(
