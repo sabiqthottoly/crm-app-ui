@@ -1,18 +1,17 @@
-// components/Table.js
 'use client';
 import React, { useState, useRef } from 'react';
 import { IoIosSearch } from 'react-icons/io';
-import { FaFilter, FaCalendarAlt } from 'react-icons/fa';
+import { FaFilter, FaCalendarAlt, FaEdit } from 'react-icons/fa';
 import leadsMockData from './leadsMockData';
-import FilterModal from './FilterModal';  // Import the FilterModal component
-import StatusFilter from './StatusFilter';  // Import the StatusFilter component
+import FilterModal from './FilterModal';
+import StatusFilter from './StatusFilter';
 
 const Table = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedStatus, setSelectedStatus] = useState('All');
-  const [isFilterModalOpen, setIsFilterModalOpen] = useState(false);  // State to manage modal visibility
-  const filterButtonRef = useRef(null);  // Reference to the filter button
+  const [isFilterModalOpen, setIsFilterModalOpen] = useState(false);
+  const filterButtonRef = useRef(null);
   const itemsPerPage = 10;
 
   // Filter data based on search term and selected status
@@ -20,13 +19,13 @@ const Table = () => {
     (item) =>
       (selectedStatus === 'All' || item.leadStatus === selectedStatus) &&
       (item.customerName.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      item.email.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      item.mobile.includes(searchTerm) ||
-      item.contactPersonNumber.includes(searchTerm) ||
-      item.district.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      item.sourceOfLead.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      item.assignProduct.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      item.priority.toLowerCase().includes(searchTerm.toLowerCase()))
+        item.email.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        item.mobile.includes(searchTerm) ||
+        item.contactPersonNumber.includes(searchTerm) ||
+        item.district.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        item.sourceOfLead.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        item.assignProduct.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        item.priority.toLowerCase().includes(searchTerm.toLowerCase()))
   );
 
   // Pagination logic
@@ -105,36 +104,17 @@ const Table = () => {
               <th scope="col" className="py-3 px-6">
                 <input type="checkbox" className="form-checkbox h-4 w-4 text-blue-600 rounded focus:ring-blue-500" />
               </th>
-              <th scope="col" className="py-3 px-6">
-                Customer Name
-              </th>
-              <th scope="col" className="py-3 px-6">
-                Mobile
-              </th>
-              <th scope="col" className="py-3 px-6">
-                Email
-              </th>
-              <th scope="col" className="py-3 px-6">
-                Contact Person Number
-              </th>
-              <th scope="col" className="py-3 px-6">
-                District
-              </th>
-              <th scope="col" className="py-3 px-6">
-                Last Follow-up Date
-              </th>
-              <th scope="col" className="py-3 px-6">
-                Source of Lead
-              </th>
-              <th scope="col" className="py-3 px-6">
-                Lead Status
-              </th>
-              <th scope="col" className="py-3 px-6">
-                Assign Product
-              </th>
-              <th scope="col" className="py-3 px-6">
-                Priority
-              </th>
+              <th scope="col" className="py-3 px-6">Customer Name</th>
+              <th scope="col" className="py-3 px-6">Mobile</th>
+              <th scope="col" className="py-3 px-6">Email</th>
+              <th scope="col" className="py-3 px-6">Contact Person Number</th>
+              <th scope="col" className="py-3 px-6">District</th>
+              <th scope="col" className="py-3 px-6">Last Follow-up Date</th>
+              <th scope="col" className="py-3 px-6">Source of Lead</th>
+              <th scope="col" className="py-3 px-6">Lead Status</th>
+              <th scope="col" className="py-3 px-6">Assign Product</th>
+              <th scope="col" className="py-3 px-6">Priority</th>
+              <th scope="col" className="py-3 px-6">Actions</th>
             </tr>
           </thead>
           <tbody className="bg-white border-b last:rounded-b-2xl">
@@ -153,11 +133,17 @@ const Table = () => {
                 <td className="py-4 px-6">{item.leadStatus}</td>
                 <td className="py-4 px-6 text-gray-700">{item.assignProduct}</td>
                 <td className="py-4 px-6">
-                  <span
-                    className={`inline-block rounded-full px-3 py-1 text-sm font-semibold ${priorityColor(item.priority)}`}
-                  >
+                  <span className={`inline-block rounded-full px-3 py-1 text-sm font-semibold ${priorityColor(item.priority)}`}>
                     {item.priority}
                   </span>
+                </td>
+                <td className="py-4 px-6 flex space-x-2">
+                  <button className="text-blue-400 hover:text-blue-700">
+                    <FaEdit />
+                  </button>
+                  <button className="text-green-600 hover:text-green-700">
+                    Assign
+                  </button>
                 </td>
               </tr>
             ))}

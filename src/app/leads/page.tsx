@@ -1,10 +1,10 @@
 // pages/index.js
-import Table from "../componets/Table";
-import Sidebar from "../componets/Sidebar";
-import Header from "../componets/Header";
-import Heading from "../componets/Heading";
-import SummaryCards from "../componets/SummaryCards";
-import ManageLeads from "../componets/ManageLeads";
+import Table from "../components/Table";
+import Sidebar from "../components/Sidebar";
+import Header from "../components/Header";
+import Heading from "../components/Heading";
+import SummaryCards from "../components/SummaryCards";
+import ManageLeads from "../components/ManageLeads";
 
 export default function Home() {
     return (
