@@ -12,13 +12,15 @@ export default function Home() {
           <Header />
           <div className="flex flex-grow">
             <Sidebar />
-            <main className="flex-grow p-5" style={{ marginLeft: '256px' }}> {/* Ensure main content does not underlap sidebar */}
+            <main className="flex-grow p-5" style={{ marginLeft: '200px', width: '100vh' }}> {/* Ensure main content does not underlap sidebar */}
               <div className="flex justify-between items-center mb-4">
                 <Heading title="Leads" />
                 <ManageLeads />
               </div>
               <SummaryCards />
-              <Table />
+              <div style={{ overflowX: 'auto' }}>
+                <Table />
+              </div>
             </main>
           </div>
         </div>

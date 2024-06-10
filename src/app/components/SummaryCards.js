@@ -21,18 +21,18 @@ const SummaryCards = () => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 pl-0 pr-0 pb-4">
       {summaryData.map((item, index) => (
-        <div key={index} className="p-4 border rounded-lg shadow-sm bg-white">
+        <div key={index} className="p-3 border rounded-lg shadow-sm bg-white">
           <div className="flex justify-between items-start">
-            <h3 className="text-gray-600">{item.title}</h3>
-            <FaEllipsisH className="text-gray-400" />
+            <h3 className="text-gray-600 text-sm">{item.title}</h3>
+            <FaEllipsisH className="text-gray-400 text-sm" />
           </div>
-          <div className="mt-2">
-            <h2 className="text-2xl font-bold">{item.count.toLocaleString()}</h2>
+          <div className="mt-1">
+            <h2 className="text-xl font-bold">{item.count.toLocaleString()}</h2>
             <div className="flex items-center mt-1">
-              <span className={`text-sm ${changeColor(item.changeType)} flex items-center`}>
+              <span className={`text-xs ${changeColor(item.changeType)} flex items-center`}>
                 {changeIcon(item.changeType)} {item.change}
               </span>
-              <span className="text-gray-500 text-sm ml-1">From last month</span>
+              <span className="text-gray-500 text-xs ml-1">From last month</span>
             </div>
           </div>
         </div>

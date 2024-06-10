@@ -75,27 +75,28 @@ const Table = () => {
       <div className="flex justify-between items-center space-x-2 pb-4">
         <StatusFilter selectedStatus={selectedStatus} setSelectedStatus={setSelectedStatus} />
         <div className="flex items-center space-x-2">
-          <div className="relative">
-            <IoIosSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" />
-            <input
-              type="text"
-              placeholder="Search anything"
-              className="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-500"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-            />
-          </div>
-          <button
-            ref={filterButtonRef}
-            onClick={() => setIsFilterModalOpen(true)}
-            className="flex items-center px-3 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-100"
-          >
-            <FaFilter className="mr-2" /> Filter
-          </button>
-          <button className="flex items-center px-3 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-100">
-            <FaCalendarAlt className="mr-2" /> Date
-          </button>
-        </div>
+  <div className="relative">
+    <IoIosSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 text-sm" />
+    <input
+      type="text"
+      placeholder="Search anything"
+      className="pl-8 pr-2 py-1.5 border border-gray-300 rounded-lg text-sm focus:outline-none focus:border-purple-500"
+      value={searchTerm}
+      onChange={(e) => setSearchTerm(e.target.value)}
+    />
+  </div>
+  <button
+    ref={filterButtonRef}
+    onClick={() => setIsFilterModalOpen(true)}
+    className="flex items-center px-2 py-2 border border-gray-300 rounded-lg text-gray-700 text-xs hover:bg-gray-100"
+  >
+    <FaFilter className="mr-1 text-sm" /> Filter
+  </button>
+  <button className="flex items-center px-2 py-2 border border-gray-300 rounded-lg text-gray-700 text-xs hover:bg-gray-100">
+    <FaCalendarAlt className="mr-1 text-sm" /> Date
+  </button>
+</div>
+
       </div>
       <div className="overflow-x-auto relative border border-gray-200 rounded-2xl">
         <table className="w-full text-sm text-left text-gray-700 border-collapse">

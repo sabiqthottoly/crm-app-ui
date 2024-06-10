@@ -9,7 +9,7 @@ const StatusFilter = ({ selectedStatus, setSelectedStatus }) => {
         <button
           key={status}
           onClick={() => setSelectedStatus(status)}
-          className={`px-3 py-1 rounded-lg ${
+          className={`px-2 py-1 rounded-lg text-sm ${
             selectedStatus === status
               ? 'bg-white text-black shadow'
               : 'text-gray-500 hover:bg-gray-100'
