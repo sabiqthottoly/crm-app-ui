@@ -61,7 +61,7 @@ const CreateRole = () => {
       <Header />
       <div className="flex flex-grow">
         <Sidebar />
-        <main className="flex-grow p-5" style={{ marginLeft: '256px' }}>
+        <main className="flex-grow p-5" style={{ marginLeft: '200px' }}>
           <h1 className="text-2xl font-bold text-black mb-6">Create Role</h1>
           <div className="mb-4">
             <label className="block text-sm font-medium text-gray-700">

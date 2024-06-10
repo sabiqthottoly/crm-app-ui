@@ -93,7 +93,7 @@ const KanbanBoard = () => {
       <Header />
       <div className="flex flex-grow">
         <Sidebar />
-        <main className="flex-grow p-5" style={{ marginLeft: '256px' }}>
+        <main className="flex-grow p-5" style={{ marginLeft: '200px' }}>
           <h1 className="text-2xl font-bold text-black mb-6">Follow Up</h1>
           <DragDropContext onDragEnd={onDragEnd}>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

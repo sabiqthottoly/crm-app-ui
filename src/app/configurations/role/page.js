@@ -98,7 +98,7 @@ const RoleManagement = () => {
       <Header />
       <div className="flex flex-grow">
         <Sidebar />
-        <main className="flex-grow p-5" style={{ marginLeft: '256px' }}>
+        <main className="flex-grow p-5" style={{ marginLeft: '200px' }}>
           <div className="flex justify-between items-center mb-4">
             <h1 className="text-2xl font-bold text-black">Role Management</h1>
             <button onClick={handleCreateRole} className="px-4 py-2 bg-purple-500 text-white rounded-lg hover:bg-purple-600">

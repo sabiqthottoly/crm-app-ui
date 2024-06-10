@@ -11,7 +11,7 @@ const Dashboard = () => {
       <Header />
       <div className="flex flex-grow">
         <Sidebar />
-        <main className="flex-grow p-5" style={{ marginLeft: '256px' }}>
+        <main className="flex-grow p-5" style={{ marginLeft: '200px' }}>
           <h1 className="text-2xl font-bold text-black mb-6">Dashboard</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
             <Card title="Active Leads" value="320" change="+12%" changeValue="24 today" reportLink="#" />
